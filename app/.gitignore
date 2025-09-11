@@ -16,4 +16,4 @@ npm-debug.log*
 yarn-error.log*
 
 # videos (too heavy for git)
-public/videos/*.mp4
+
