@@ -5,7 +5,7 @@ import React from "react";
 const VideoSection = ({
     title = "Medium length section heading goes here",
     description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
-    videoUrl = "https://www.w3schools.com/html/mov_bbb.mp4" // default demo video
+    videoUrl = "/videos/intro.mp4" // 👈 public folder se video use karna
 }) => {
     return (
         <section className="w-full py-12 px-6 text-center">
@@ -21,11 +21,11 @@ const VideoSection = ({
 
             {/* Video Box */}
             <div className="mt-8 flex justify-center">
-                <div className="relative w-full max-w-4xl h-[250px] sm:h-[400px] bg-gray-300 rounded-lg overflow-hidden flex items-center justify-center">
+                <div className="relative w-full max-w-4xl bg-gray-300 rounded-lg overflow-hidden flex items-center justify-center">
                     <video
                         src={videoUrl}
                         controls
-                        className="w-full h-full object-cover rounded-lg"
+                        className="w-full h-auto rounded-lg object-contain" // 👈 cut nahi hoga
                     />
                 </div>
             </div>

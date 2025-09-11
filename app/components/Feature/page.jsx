@@ -12,37 +12,37 @@ export default function Feature() {
             title: "Live Alerts",
             description:
                 "Instant updates on traffic, safety notices, and more in real time.",
-            image: "/images/farhan.jpg",
+            image: "/images/features/1.png",
         },
         {
             title: "Local Events",
             description:
                 "Stay connected with community events happening near you.",
-            image: "/images/farhan.jpg",
+            image: "/images/features/2.png",
         },
         {
             title: "City Services",
             description:
                 "Quick access to important government and city services.",
-            image: "/images/farhan.jpg",
+            image: "/images/features/3.png",
         },
         {
             title: "Business Directory",
             description:
                 "Find trusted local businesses with ease and confidence.",
-            image: "/images/farhan.jpg",
+            image: "/images/features/4.png",
         },
         {
             title: "Community Updates",
             description:
                 "Stay informed with reliable neighborhood updates.",
-            image: "/images/farhan.jpg",
+            image: "/images/features/5.png",
         },
         {
             title: "Emergency Alerts",
             description:
                 "Get notified instantly about critical citywide alerts.",
-            image: "/images/farhan.jpg",
+            image: "/images/features/6.png",
         },
     ];
 
@@ -85,7 +85,7 @@ export default function Feature() {
                                         alt={feature.title}
                                         width={400}
                                         height={300}
-                                        className="object-cover w-full h-72"
+                                        className="object-fill w-full h-90"
                                     />
                                     {/* Overlay */}
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
