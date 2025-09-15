@@ -28,6 +28,7 @@ const VideoSection = ({
                         className="w-full h-auto rounded-lg object-contain" // 👈 cut nahi hoga
                     />
                 </div>
+
             </div>
         </section>
     );

@@ -9,7 +9,7 @@ export default function InfoSection() {
 
                 {/* Left Side - Image / Illustration */}
                 <div className="flex justify-center">
-                    <div className="relative w-full max-w-2xl h-[320px] rounded-xl overflow-hidden shadow-lg">
+                    <div className="relative w-full max-w-2xl h-[400px] rounded-xl overflow-hidden shadow-lg">
                         <Image
                             src="/images/eye.png"
                             alt="Info Section Illustration"

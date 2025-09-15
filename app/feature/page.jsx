@@ -29,7 +29,7 @@ export default function FeaturesPage() {
     ];
 
     return (
-        <section className="py-20 px-6 bg-gray-50">
+        <section className=" bg-gray-50">
             <Navbar />
             <AlertsSection />
             <RemindersSection />

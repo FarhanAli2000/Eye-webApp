@@ -23,7 +23,7 @@ export default function Downer() {
 
                 {/* Right Side - Single Image */}
                 <div className="flex justify-center">
-                    <div className="relative w-[300px] h-[600px]">
+                    <div className="relative w-[450px] h-[900px]">
                         <Image
                             src="/images/2mobiles.png" // <-- apna phone image yahan rakho (public/phone.png)
                             alt="App preview"
