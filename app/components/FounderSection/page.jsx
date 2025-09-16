@@ -31,12 +31,20 @@ export default function FounderSection() {
                     </p>
                 </div>
 
-                {/* Right Side - Founder Image */}
-                <div className="flex justify-center">
-                    <div className="relative w-[320px] h-[420px] md:w-[380px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl">
+                {/* Right Side - Founder Images */}
+                <div className="flex gap-6 justify-center">
+                    <div className="relative w-[280px] h-[350px] md:w-[300px] md:h-[420px] rounded-2xl overflow-hidden shadow-xl">
                         <Image
-                            src="/images/founder.png" // founder image ka path
-                            alt="Founder"
+                            src="/images/founder.png"
+                            alt="Founder 1"
+                            fill
+                            className="object-cover"
+                        />
+                    </div>
+                    <div className="relative w-[280px] h-[350px] md:w-[300px] md:h-[420px] rounded-2xl overflow-hidden shadow-xl">
+                        <Image
+                            src="/images/eye.png"
+                            alt="Founder 2"
                             fill
                             className="object-cover"
                         />

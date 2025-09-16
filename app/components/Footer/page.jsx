@@ -3,15 +3,16 @@
 import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import Image from "next/image";
 import logo from "../../../public/images/hen.png";
+
 export default function Footer() {
     return (
-        <footer className=" border-t mt-12 bg-[#95C9DA]" >
-
+        <footer className="border-t mt-12 bg-[#95C9DA]">
             <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+
                 {/* Logo & Contact */}
                 <div>
                     <Image
-                        src={logo} // replace with your logo
+                        src={logo}
                         alt="The Eye Logo"
                         width={80}
                         height={80}
@@ -19,7 +20,6 @@ export default function Footer() {
                     />
                     <p className="font-semibold text-gray-900 mb-2">Contact:</p>
                     <p className="text-gray-700">1800 123 4567</p>
-                    {/* <p className="text-teal-600 underline">info@relume</p> */}
 
                     {/* Social Icons */}
                     <div className="flex gap-4 mt-4">
@@ -38,23 +38,12 @@ export default function Footer() {
                     </div>
                 </div>
 
-                {/* Quick Links Column 1 */}
-                <div>
-                    <p className="font-semibold text-gray-900 mb-4">Quick Links</p>
-                    <ul className="space-y-2 text-gray-700">
-                        <li>
-                            <a href="#" className="hover:text-teal-600 font-medium">
-                                Home
-                            </a>
-                        </li>
-                        <li><a href="#" className="hover:text-teal-600">About us</a></li>
-                        <li><a href="#" className="hover:text-teal-600">Contact us</a></li>
-                        <li><a href="#" className="hover:text-teal-600">Feature</a></li>
-                    </ul>
-                </div>
+                {/* Empty columns to push Quick Links to right */}
+                <div></div>
+                <div></div>
 
-                {/* Quick Links Column 2 */}
-                <div>
+                {/* Quick Links - now on right side */}
+                <div className="md:text-right">
                     <p className="font-semibold text-gray-900 mb-4">Quick Links</p>
                     <ul className="space-y-2 text-gray-700">
                         <li>

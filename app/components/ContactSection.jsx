@@ -122,12 +122,12 @@ export default function ContactSection() {
 
                 {/* Right Image */}
                 <div className="flex justify-center">
-                    <div className="relative w-full max-w-sm h-[400px] rounded-xl overflow-hidden bg-[#086E86] flex items-center justify-center">
+                    <div className="relative w-full max-w-sm h-[500px] rounded-xl overflow-hidden bg-[#086E86] flex items-center justify-center">
                         <Image
                             src="/images/eye.png"
                             alt="The Eye App"
-                            width={300}
-                            height={300}
+                            width={500}
+                            height={500}
                             className="object-contain"
                         />
                     </div>

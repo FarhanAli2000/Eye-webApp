@@ -22,7 +22,7 @@ export default function InfoSection() {
 
                 {/* Right Side - Text */}
                 <div>
-                    <p className="text-teal-600 font-semibold mb-2">Our Mission</p>
+                    <p className="text-teal-600 font-semibold mb-2">Our Vision</p>
                     <h2 className="text-4xl font-bold text-gray-900 leading-snug mb-6">
                         Long heading is what you see here in this info section
                     </h2>
