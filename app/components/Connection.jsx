@@ -8,16 +8,16 @@ export default function Connection() {
             <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
                 {/* Left Side - Video */}
-                {/* <div className="flex justify-center">
+                <div className="flex justify-center">
                     <video
-                        src="/videos/Community Connection.mp4" 
+                        src="/videos/data5.mp4"
                         controls
                         autoPlay
                         loop
                         muted
                         className="rounded-xl shadow-lg w-full max-w-2xl h-[320px] object-cover"
                     />
-                </div> */}
+                </div>
 
                 {/* Right Side - Text */}
                 <div>
