@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function ContactSection() {
     const [formData, setFormData] = useState({
@@ -45,8 +46,14 @@ export default function ContactSection() {
     return (
         <section className="w-full bg-gradient-to-b from-[#92E0FD] to-white py-16">
             <div className="max-w-6xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                
                 {/* Left Form */}
-                <div>
+                <motion.div
+                    initial={{ opacity: 0, x: -60 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.9 }}
+                    viewport={{ once: true }}
+                >
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
                         Contact us
                     </h2>
@@ -55,7 +62,11 @@ export default function ContactSection() {
                     </p>
 
                     <form className="space-y-5" onSubmit={handleSubmit}>
-                        <div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                        >
                             <label className="block text-sm font-medium text-gray-700">
                                 Name
                             </label>
@@ -68,8 +79,13 @@ export default function ContactSection() {
                                 required
                                 className="w-full mt-1 px-4 py-2 border rounded-md focus:ring-2 focus:ring-[#086E86] focus:outline-none"
                             />
-                        </div>
-                        <div>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.3 }}
+                        >
                             <label className="block text-sm font-medium text-gray-700">
                                 Email
                             </label>
@@ -82,8 +98,13 @@ export default function ContactSection() {
                                 required
                                 className="w-full mt-1 px-4 py-2 border rounded-md focus:ring-2 focus:ring-[#086E86] focus:outline-none"
                             />
-                        </div>
-                        <div>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.4 }}
+                        >
                             <label className="block text-sm font-medium text-gray-700">
                                 Subject
                             </label>
@@ -95,8 +116,13 @@ export default function ContactSection() {
                                 onChange={handleChange}
                                 className="w-full mt-1 px-4 py-2 border rounded-md focus:ring-2 focus:ring-[#086E86] focus:outline-none"
                             />
-                        </div>
-                        <div>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.5 }}
+                        >
                             <label className="block text-sm font-medium text-gray-700">
                                 Message
                             </label>
@@ -109,20 +135,33 @@ export default function ContactSection() {
                                 required
                                 className="w-full mt-1 px-4 py-2 border rounded-md focus:ring-2 focus:ring-[#086E86] focus:outline-none"
                             ></textarea>
-                        </div>
-                        <button
+                        </motion.div>
+
+                        <motion.button
                             type="submit"
                             disabled={loading}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
                             className="bg-[#086E86] text-white px-6 py-2 rounded-md hover:bg-[#065a6a] transition disabled:opacity-50"
                         >
                             {loading ? "Sending..." : "Submit"}
-                        </button>
+                        </motion.button>
                     </form>
-                </div>
+                </motion.div>
 
                 {/* Right Image */}
-                <div className="flex justify-center">
-                    <div className="relative w-full max-w-sm h-[500px] rounded-xl overflow-hidden bg-[#086E86] flex items-center justify-center">
+                <motion.div
+                    className="flex justify-center"
+                    initial={{ opacity: 0, x: 60 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.9, delay: 0.3 }}
+                    viewport={{ once: true }}
+                >
+                    <motion.div
+                        className="relative w-full max-w-sm h-[500px] rounded-xl overflow-hidden bg-[#086E86] flex items-center justify-center"
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.3 }}
+                    >
                         <Image
                             src="/images/eye.png"
                             alt="The Eye App"
@@ -130,8 +169,8 @@ export default function ContactSection() {
                             height={500}
                             className="object-contain"
                         />
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
             </div>
         </section>
     );

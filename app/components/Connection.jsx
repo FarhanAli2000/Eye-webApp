@@ -1,6 +1,7 @@
 // components/RemindersSection.jsx
 "use client";
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function Connection() {
     return (
@@ -8,26 +9,42 @@ export default function Connection() {
             <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
                 {/* Left Side - Video */}
-                <div className="flex justify-center">
-                    <video
+                <motion.div
+                    className="flex justify-center"
+                    initial={{ opacity: 0, x: -60, scale: 0.9 }}
+                    whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                    transition={{ duration: 0.9 }}
+                    viewport={{ once: true }}
+                >
+                    <motion.video
                         src="/videos/data5.mp4"
                         controls
                         autoPlay
                         loop
                         muted
                         className="rounded-xl shadow-lg w-full max-w-2xl h-[320px] object-cover"
+                        whileHover={{ scale: 1.05, boxShadow: "0px 8px 25px rgba(0,0,0,0.25)" }}
+                        transition={{ duration: 0.3 }}
                     />
-                </div>
+                </motion.div>
 
                 {/* Right Side - Text */}
-                <div>
+                <motion.div
+                    initial={{ opacity: 0, x: 60 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.9, delay: 0.2 }}
+                    viewport={{ once: true }}
+                >
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
                         Community Connection
                     </h2>
                     <p className="mt-4 text-gray-600 leading-relaxed">
-                        Built for Inglewood, by Inglewood. The Eye App brings people and businesses together to strengthen the community. Discover local entrepreneurs, support family-owned shops, and engage in events that celebrate the city’s spirit. It’s more than an app—it’s your connection to community life.
+                        Built for Inglewood, by Inglewood. The Eye App brings people and businesses 
+                        together to strengthen the community. Discover local entrepreneurs, support 
+                        family-owned shops, and engage in events that celebrate the city’s spirit. 
+                        It’s more than an app—it’s your connection to community life.
                     </p>
-                </div>
+                </motion.div>
 
             </div>
         </section>

@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function FounderSection() {
     return (
@@ -7,7 +8,12 @@ export default function FounderSection() {
             <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
                 {/* Left Side - Text */}
-                <div>
+                <motion.div
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                >
                     <p className="text-sm font-semibold text-teal-700 mb-2">About Founder</p>
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                         Courtney Reddix
@@ -29,27 +35,41 @@ export default function FounderSection() {
                         into more than just a mobile tool—it’s becoming a community platform that reflects
                         the heartbeat of Inglewood.
                     </p>
-                </div>
+                </motion.div>
 
                 {/* Right Side - Founder Images */}
-                <div className="flex gap-6 justify-center">
-                    <div className="relative w-[280px] h-[350px] md:w-[300px] md:h-[420px] rounded-2xl overflow-hidden shadow-xl">
+                <motion.div
+                    className="flex gap-6 justify-center"
+                    initial={{ opacity: 0, x: 50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, delay: 0.3 }}
+                    viewport={{ once: true }}
+                >
+                    <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.3 }}
+                        className="relative w-[280px] h-[350px] md:w-[300px] md:h-[420px] rounded-2xl overflow-hidden shadow-xl"
+                    >
                         <Image
                             src="/images/founder.png"
                             alt="Founder 1"
                             fill
                             className="object-cover"
                         />
-                    </div>
-                    <div className="relative w-[280px] h-[350px] md:w-[300px] md:h-[420px] rounded-2xl overflow-hidden shadow-xl">
+                    </motion.div>
+                    <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.3, delay: 0.1 }}
+                        className="relative w-[280px] h-[350px] md:w-[300px] md:h-[420px] rounded-2xl overflow-hidden shadow-xl"
+                    >
                         <Image
                             src="/images/eye.png"
                             alt="Founder 2"
                             fill
                             className="object-cover"
                         />
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
             </div>
         </section>
     );
