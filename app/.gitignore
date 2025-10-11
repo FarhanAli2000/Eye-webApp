@@ -15,5 +15,9 @@
 npm-debug.log*
 yarn-error.log*
 
-
+*.log
+public/videos/
+*.mp4
+*.mov
+*.mkv
 
