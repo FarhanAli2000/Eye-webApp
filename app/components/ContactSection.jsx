@@ -55,10 +55,11 @@ export default function ContactSection() {
                     viewport={{ once: true }}
                 >
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                        Contact us
+                        Contact Us
                     </h2>
                     <p className="text-gray-600 mt-3 mb-8">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        We love hearing about new partnerships, feature ideas, and local happenings in Inglewood.
+                        Send us a note and our team will respond within one business day.
                     </p>
 
                     <form className="space-y-5" onSubmit={handleSubmit}>

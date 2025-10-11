@@ -17,13 +17,13 @@ export default function Downer() {
                 >
                     <p className="text-teal-600 font-semibold text-sm">Our Mission</p>
                     <h2 className="text-4xl font-bold text-gray-900 mt-2">
-                        Long heading is what you see here in this feature section
+                        Built for Inglewood, powered by community voices
                     </h2>
                     <p className="text-gray-600 mt-6 leading-relaxed">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                        varius enim in eros elementum tristique. Duis cursus, mi quis
-                        viverra ornare, eros dolor interdum nulla, ut commodo diam libero
-                        vitae erat.
+                        Our team walks the blocks of Inglewood every week to talk with residents, merchants,
+                        and city partners. Their stories shape the roadmap: more transparency around public
+                        services, more visibility for local businesses, and more reasons to explore the places
+                        that make our city special.
                     </p>
                 </motion.div>
 

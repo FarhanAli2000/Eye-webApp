@@ -19,7 +19,7 @@ export default function Locations() {
                         Locations
                     </h2>
                     <p className="mt-3 text-gray-600 max-w-2xl">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Visit our community hub in downtown Inglewood for weekly onboarding sessions, partner meetups, and live demos of The Eye App.
                     </p>
                 </motion.div>
 
@@ -32,7 +32,7 @@ export default function Locations() {
                     viewport={{ once: true }}
                 >
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10897.433403403742!2d19.0502744!3d47.497912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dc429e2f6aab%3A0xe7d8b7cbdeb18f!2sBudapest%2C%20Hungary!5e0!3m2!1sen!2shu!4v1705152342342!5m2!1sen!2shu"
+                        src="https://maps.google.com/maps?q=Inglewood%2C%20CA&t=&z=13&ie=UTF8&iwloc=&output=embed"
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}

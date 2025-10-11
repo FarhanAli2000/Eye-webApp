@@ -39,16 +39,18 @@ export default function InfoSection() {
                 >
                     <p className="text-teal-600 font-semibold mb-2">Our Vision</p>
                     <h2 className="text-4xl font-bold text-gray-900 leading-snug mb-6">
-                        Long heading is what you see here in this info section
+                        A smarter city experience for every resident
                     </h2>
                     <p className="text-gray-600 leading-relaxed mb-4">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                        varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-                        ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+                        The Eye App was born out of conversations with neighbors who wanted a single place to
+                        discover events, transit changes, and local deals without digging through a dozen feeds.
+                        By partnering with civic leaders and small businesses, we surface the updates that matter
+                        the moment they happen.
                     </p>
                     <p className="text-gray-600 leading-relaxed">
-                        Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat
-                        wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.
+                        We believe technology should amplify community voices. That is why every feature we ship
+                        is co-designed with residents, from safety alerts to curated guides that highlight the
+                        culture unique to Inglewood.
                     </p>
                 </motion.div>
             </div>

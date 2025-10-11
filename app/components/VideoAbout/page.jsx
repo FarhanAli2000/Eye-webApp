@@ -4,8 +4,8 @@ import React, { useEffect, useRef } from "react";
 import Hls from "hls.js";
 
 const VideoAbout = ({
-    title = "Medium length section heading goes here",
-    description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
+    title = "See How The Eye App Brings Inglewood Together",
+    description = "From block parties to business spotlights, The Eye App delivers real-time stories captured by the people who live and work here. Watch how neighbors, city partners, and entrepreneurs use the platform to share what is happening on their street right now.",
     videoUrl = "https://customer-leo8lubv91ct4vwd.cloudflarestream.com/452f4c92011412641018976f0a12a4bd/manifest/video.m3u8",
 }) => {
     const videoRef = useRef(null);

@@ -5,27 +5,27 @@ import { motion } from "framer-motion";
 export default function ContactInfo() {
     const info = [
         {
-            title: "Email",
+            title: "Email Support",
             description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in ero.",
-            value: "hello@relume.io",
-            link: "mailto:hello@relume.io",
+                "Need help getting started or want to share feedback? The Inglewood support crew monitors this inbox daily.",
+            value: "support@theeyeapp.com",
+            link: "mailto:support@theeyeapp.com",
             icon: <Mail className="w-10 h-10 text-[#086E86]" />,
         },
         {
             title: "Live Chat",
             description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in ero.",
-            value: "+1 (555) 000-0000",
-            link: "tel:+15550000000",
+                "Open the app and tap the chat bubble to connect with a real person from 8am-8pm PT, seven days a week.",
+            value: "chat.theeyeapp.com",
+            link: "https://chat.theeyeapp.com",
             icon: <MessageSquare className="w-10 h-10 text-[#086E86]" />,
         },
         {
-            title: "Phone",
+            title: "Call Us",
             description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in ero.",
-            value: "123 Sample St, Sydney NSW 2000 AU",
-            link: "https://goo.gl/maps/example",
+                "Prefer the phone? Give us a ring Monday through Friday and we will walk you through the latest updates.",
+            value: "+1 (424) 555-0136",
+            link: "tel:+14245550136",
             icon: <Phone className="w-10 h-10 text-[#086E86]" />,
         },
     ];
