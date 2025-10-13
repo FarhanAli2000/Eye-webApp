@@ -40,8 +40,8 @@ export default function StatsSection() {
           absolute right-0 bottom-0 translate-y-0
           w-24 h-44 opacity-60
           sm:w-28 sm:h-52 sm:opacity-70
-          md:top-1/2 md:-translate-y-1/2 md:bottom-auto md:w-40 md:h-72 md:opacity-100
-          lg:w-[240px] lg:h-[460px]
+          md:top-1/2 md:-translate-y-1/2 md:bottom-auto md:w-30 md:h-72 md:opacity-100
+          lg:w-[220px] lg:h-[460px]
         "
         aria-hidden
       >

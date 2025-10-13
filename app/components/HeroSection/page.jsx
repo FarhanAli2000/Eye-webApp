@@ -62,7 +62,7 @@ export default function HeroSection() {
                 >
                     <div className="relative w-[420px] sm:w-[500px] h-[820px]">
                         <Image
-                            src="/images/mobile.png"
+                            src="/images/right-hero.png"
                             alt="Mobile app screen"
                             fill
                             className="object-contain"
