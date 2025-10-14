@@ -24,3 +24,19 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Move Swiper pagination dots below */
+
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 20px !important;  /* Adjust space below cards */
+}
+
+.swiper-pagination-bullet {
+  background:grey !important; /* blue color bullet */
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: black !important; /* darker active bullet */
+}

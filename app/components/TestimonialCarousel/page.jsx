@@ -127,7 +127,7 @@ export default function TestimonialCarousel() {
                             key={dotIndex}
                             animate={{
                                 scale: dotIndex === index ? 1.3 : 1,
-                                backgroundColor: dotIndex === index ? "#3B82F6" : "#D1D5DB",
+                                backgroundColor: dotIndex === index ? "black" : "#D1D5DB",
                             }}
                             transition={{ duration: 0.3 }}
                             className="w-2.5 h-2.5 rounded-full"
