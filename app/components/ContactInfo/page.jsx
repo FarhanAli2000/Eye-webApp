@@ -31,7 +31,7 @@ export default function ContactInfo() {
     ];
 
     return (
-        <section className="w-full bg-[#A6D3E2] py-16">
+        <section className="w-full bg-[#E4F5FB] py-16">
             <motion.div
                 className="max-w-6xl mx-auto px-6 lg:px-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 text-center md:text-left"
                 initial="hidden"
