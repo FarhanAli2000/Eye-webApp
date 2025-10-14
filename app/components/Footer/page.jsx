@@ -134,7 +134,7 @@ export default function Footer({
                 className="underline underline-offset-4 hover:opacity-80 focus:ring-2 focus:ring-[#086E86]"
               >
                 {l.label}
-                {/* complete */}
+                
               </Link>
             ))}
           </nav>
