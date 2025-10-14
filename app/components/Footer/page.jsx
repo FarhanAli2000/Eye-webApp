@@ -1,5 +1,6 @@
 // components/Footer.jsx
 import React from "react";
+import Link from "next/link";
 import { Facebook, Instagram, Linkedin, Youtube, Twitter } from "lucide-react";
 
 export default function Footer({
@@ -87,7 +88,7 @@ export default function Footer({
               <h4 className="text-base font-semibold">{quickLeftTitle}</h4>
               <nav className="mt-3 space-y-3">
                 {leftLinks.map((l) => (
-                  <a
+                  <Link
                     key={l.label}
                     href={l.href}
                     className="block text-base transition hover:underline focus:underline"
@@ -95,7 +96,7 @@ export default function Footer({
                     <span className={isHome(l.label) ? "text-[#086E86] font-medium" : undefined}>
                       {l.label}
                     </span>
-                  </a>
+                  </Link>
                 ))}
               </nav>
             </div>
@@ -104,7 +105,7 @@ export default function Footer({
               <h4 className="text-base font-semibold">{quickRightTitle}</h4>
               <nav className="mt-3 space-y-3">
                 {rightLinks.map((l) => (
-                  <a
+                  <Link
                     key={l.label}
                     href={l.href}
                     className="block text-base transition hover:underline focus:underline"
@@ -112,7 +113,7 @@ export default function Footer({
                     <span className={isHome(l.label) ? "text-[#086E86] font-medium" : undefined}>
                       {l.label}
                     </span>
-                  </a>
+                  </Link>
                 ))}
               </nav>
             </div>
@@ -127,13 +128,13 @@ export default function Footer({
           <p>{brandNote}</p>
           <nav className="flex flex-wrap items-center gap-x-6 gap-y-2">
             {legal.map((l) => (
-              <a
+              <Link
                 key={l.label}
                 href={l.href}
                 className="underline underline-offset-4 hover:opacity-80 focus:ring-2 focus:ring-[#086E86]"
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
           </nav>
         </div>
