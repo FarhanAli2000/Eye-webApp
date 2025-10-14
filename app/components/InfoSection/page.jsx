@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 
 export default function InfoSection() {
     return (
-        <section className="py-20 px-6 bg-white">
-            <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <section className="py-10 md:py-14 px-6 bg-white">
+            <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
 
                 {/* Left Side - Image / Illustration */}
                 <motion.div
@@ -38,10 +38,10 @@ export default function InfoSection() {
                     viewport={{ once: true }}
                 >
                     <p className="text-teal-600 font-semibold mb-2">Our Vision</p>
-                    <h2 className="text-4xl font-bold text-gray-900 leading-snug mb-6">
+                    <h2 className="text-4xl font-bold text-gray-900 leading-snug mb-5">
                         A smarter city experience for every resident
                     </h2>
-                    <p className="text-gray-600 leading-relaxed mb-4">
+                    <p className="text-gray-600 leading-relaxed mb-3">
                         The Eye App was born out of conversations with neighbors who wanted a single place to
                         discover events, transit changes, and local deals without digging through a dozen feeds.
                         By partnering with civic leaders and small businesses, we surface the updates that matter

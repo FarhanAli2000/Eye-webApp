@@ -19,21 +19,13 @@ export default function FounderSection() {
                         Courtney Reddix
                     </h2>
                     <p className="text-gray-700 leading-relaxed mb-4">
-                        Courtney Reddix is the founder and driving force behind The Eye App.
-                        As a passionate advocate for community engagement, Courtney recognized
-                        that residents of Inglewood needed a faster, smarter way to stay informed
-                        about their city.
+                       Courtney Reddix is the founder and visionary behind The Eye App. With a strong passion for community engagement, Courtney noticed that residents of Inglewood lacked a simple, reliable way to stay informed about their city’s events, updates, and local businesses.
                     </p>
                     <p className="text-gray-700 leading-relaxed mb-4">
-                        With a background in entrepreneurship and a deep connection to her community,
-                        she set out to bridge the gap between technology and everyday life in Inglewood.
-                        Her vision was clear: create an app that empowers people with real-time updates,
-                        supports local businesses, and strengthens the sense of belonging within the city.
+        Bringing years of entrepreneurial experience and a deep connection to the community, he set out to bridge technology and everyday life, creating an app that empowers residents with real-time alerts, supports local businesses, and fosters a stronger sense of community.
                     </p>
                     <p className="text-gray-700 leading-relaxed">
-                        Courtney’s leadership and commitment to innovation continue to shape The Eye App
-                        into more than just a mobile tool—it’s becoming a community platform that reflects
-                        the heartbeat of Inglewood.
+                Under Courtney’s leadership, The Eye App is more than a mobile application ,  it’s a community platform that reflects the heartbeat of Inglewood, helping people feel connected, informed, and involved.
                     </p>
                 </motion.div>
 
