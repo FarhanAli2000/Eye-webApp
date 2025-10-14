@@ -14,12 +14,11 @@ export default function StatsSection() {
       {/* Left Mobile Image */}
       <div
         className="
-          pointer-events-none
-          absolute left-0 bottom-0 translate-y-0
-          w-24 h-44 opacity-60
-          sm:w-28 sm:h-52 sm:opacity-70
-          md:top-1/2 md:-translate-y-1/2 md:bottom-auto md:w-40 md:h-72 md:opacity-100
-          lg:w-[240px] lg:h-[460px]
+          pointer-events-none hidden xl:block
+          absolute left-6 bottom-0 translate-y-0
+          xl:left-0
+          w-[220px] h-[420px] opacity-80
+          2xl:w-[240px] 2xl:h-[460px] 2xl:opacity-100
         "
         aria-hidden
       >
@@ -28,7 +27,7 @@ export default function StatsSection() {
           alt="Mobile mockup left"
           fill
           className="object-contain"
-          sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, (max-width: 1024px) 160px, 240px"
+          sizes="(max-width: 1279px) 0px, (max-width: 1535px) 220px, 240px"
           priority
         />
       </div>
@@ -36,12 +35,11 @@ export default function StatsSection() {
       {/* Right Mobile Image */}
       <div
         className="
-          pointer-events-none
-          absolute right-0 bottom-0 translate-y-0
-          w-24 h-44 opacity-60
-          sm:w-28 sm:h-52 sm:opacity-70
-          md:top-1/2 md:-translate-y-1/2 md:bottom-auto md:w-30 md:h-72 md:opacity-100
-          lg:w-[220px] lg:h-[460px] 
+          pointer-events-none hidden xl:block
+          absolute right-6 bottom-0 translate-y-0
+          xl:right-0
+          w-[220px] h-[420px] opacity-80
+          2xl:w-[240px] 2xl:h-[460px] 2xl:opacity-100
         "
         aria-hidden
       >
@@ -50,7 +48,7 @@ export default function StatsSection() {
           alt="Mobile mockup right"
           fill
           className="object-contain"
-          sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, (max-width: 1024px) 160px, 240px"
+          sizes="(max-width: 1279px) 0px, (max-width: 1535px) 220px, 240px"
         />
       </div>
 
