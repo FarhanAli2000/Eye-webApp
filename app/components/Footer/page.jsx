@@ -16,7 +16,7 @@ export default function Footer({
     { label: "About us", href: "/about" },
     { label: "Contact us", href: "/contact" },
     { label: "Feature", href: "/feature" },
-    { label: "Pricing", href: "/pricing" },
+    { label: "How to Delete Your Account", href: "/delete-account" },
     { label: "FAQ", href: "/faq" },
   ],
   socials = [
