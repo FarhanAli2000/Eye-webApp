@@ -1,5 +1,4 @@
 "use client";
-
 import { motion } from "framer-motion";
 
 const faqs = [
@@ -32,14 +31,14 @@ const faqs = [
 
 export default function FAQPage() {
   return (
-    <section className="py-16 text-center">
-      {/* Heading Animation */}
+    <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-0 text-center bg-white">
+      {/* Heading */}
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-3xl font-bold mb-2"
+        className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black mb-2"
       >
         Frequently Asked Questions
       </motion.h2>
@@ -49,18 +48,10 @@ export default function FAQPage() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true }}
-        className="text-gray-400 mb-6"
+        className="text-gray-500 text-sm sm:text-base mb-8"
       >
-      
+        Find quick answers to the most common questions about The Eye App.
       </motion.p>
-
-      {/* <motion.button
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        className="bg-[#086E86] text-white px-6 py-2 rounded-full mb-12 hover:bg-[#065a6c] transition"
-      >
-        Contact Now
-      </motion.button> */}
 
       {/* FAQ Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
@@ -71,11 +62,15 @@ export default function FAQPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.15 }}
             viewport={{ once: true }}
-            whileHover={{ scale: 1.03 }}
-            className="bg-[#E4F5FB] shadow rounded-xl p-6 text-left border border-[#6BB3CA]"
+            whileHover={{ scale: 1.02 }}
+            className="bg-[#E4F5FB] shadow rounded-xl p-4 sm:p-6 text-left border border-[#6BB3CA]"
           >
-            <h3 className="font-semibold mb-2 text-black">{faq.question}</h3>
-            <p className="text-black/80 text-sm leading-relaxed">{faq.answer}</p>
+            <h3 className="font-semibold text-base sm:text-lg mb-2 text-black">
+              {faq.question}
+            </h3>
+            <p className="text-black/80 text-sm sm:text-base leading-relaxed">
+              {faq.answer}
+            </p>
           </motion.div>
         ))}
       </div>

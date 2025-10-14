@@ -33,7 +33,7 @@ export default function ContactInfo() {
     return (
         <section className="w-full bg-[#E4F5FB] py-16">
             <motion.div
-                className="max-w-6xl mx-auto px-6 lg:px-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 text-center md:text-left"
+                className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10 text-center md:text-left"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}

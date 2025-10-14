@@ -5,8 +5,8 @@ import Image from "next/image";
 
 export default function AlertsSection() {
   return (
-    <section className="w-full bg-gradient-to-b from-[#92E0FD] to-[#FFFFFF] py-14">
-      <div className="container mx-auto grid grid-cols-1 items-center gap-8 px-6 md:grid-cols-2">
+    <section className="w-full bg-gradient-to-b from-[#92E0FD] to-[#FFFFFF] py-10 md:py-16">
+      <div className="container mx-auto grid grid-cols-1 items-center gap-10 px-4 sm:px-6 md:grid-cols-2">
         
         {/* Left Content */}
         <motion.div
@@ -15,10 +15,10 @@ export default function AlertsSection() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 leading-snug">
             Real-Time Alerts
           </h2>
-          <p className="mt-3 text-gray-700 leading-relaxed">
+          <p className="mt-4 text-sm sm:text-base text-gray-700 leading-relaxed">
             Never miss important updates again. The Eye App delivers instant alerts
             on traffic delays, safety notices, weather warnings, and citywide
             news—all in real time. Stay prepared, make better decisions, and keep
@@ -36,11 +36,11 @@ export default function AlertsSection() {
           whileHover={{ scale: 1.03 }}
         >
           <Image
-            src="/images/Real3.png" // 🔁 Change to your image path
+            src="/images/Real3.png"
             alt="Real-Time Alerts"
             width={560}
             height={340}
-            className="h-[480px] w-full max-w-xl rounded-xl object-cover"
+            className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xl rounded-xl object-cover"
           />
         </motion.div>
       </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { ArrowLeft, ArrowRight, Star } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -31,11 +31,31 @@ const testimonials = [
 
 export default function TestimonialCarousel() {
     const [index, setIndex] = useState(0);
+    const [cardsPerView, setCardsPerView] = useState(1);
+
+    useEffect(() => {
+        const updateCards = () => {
+            setCardsPerView(window.innerWidth >= 1024 ? 2 : 1);
+        };
+
+        updateCards();
+        window.addEventListener("resize", updateCards);
+        return () => window.removeEventListener("resize", updateCards);
+    }, []);
 
     const prevSlide = () =>
-        setIndex(index === 0 ? testimonials.length - 1 : index - 1);
+        setIndex((current) =>
+            current === 0 ? testimonials.length - 1 : current - 1
+        );
     const nextSlide = () =>
-        setIndex(index === testimonials.length - 1 ? 0 : index + 1);
+        setIndex((current) =>
+            current === testimonials.length - 1 ? 0 : current + 1
+        );
+
+    const visibleTestimonials = Array.from(
+        { length: cardsPerView },
+        (_, offset) => testimonials[(index + offset) % testimonials.length]
+    );
 
     return (
         <section className="w-full py-16 px-4 bg-gradient-to-r from-[#92E0FD] to-[#FFFFFF]">
@@ -59,11 +79,11 @@ export default function TestimonialCarousel() {
                     Real stories from people who use The Eye App to stay connected in Inglewood.
                 </motion.p>
 
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     <AnimatePresence mode="wait">
-                        {testimonials.slice(index, index + 2).map((t, i) => (
+                        {visibleTestimonials.map((t, i) => (
                             <motion.div
-                                key={t.name}
+                                key={`${t.name}-${i}`}
                                 initial={{ opacity: 0, y: 40, scale: 0.95 }}
                                 animate={{ opacity: 1, y: 0, scale: 1 }}
                                 exit={{ opacity: 0, y: -40, scale: 0.95 }}
@@ -105,7 +125,7 @@ export default function TestimonialCarousel() {
                 </div>
 
                 {/* Controls */}
-                <div className="flex justify-center items-center gap-4 mt-8">
+                <div className="flex flex-wrap justify-center items-center gap-4 mt-8">
                     <button
                         onClick={prevSlide}
                         className="w-10 h-10 flex items-center justify-center rounded-full border hover:bg-gray-100 transition"
