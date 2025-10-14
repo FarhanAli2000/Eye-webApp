@@ -19,8 +19,8 @@ export default function RemindersSection() {
           whileHover={{ scale: 1.02 }}
         >
           <Image
-            src="/images/Smart-reminder.png"  // 🖼 Replace with your real image path
-            alt="Smart Reminders"
+            src="/images/Smart-Reminder.png"
+            alt="Smart Reminders ok"
             width={600}
             height={350}
             priority
