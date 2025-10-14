@@ -3,7 +3,7 @@ import nodemailer from "nodemailer";
 export async function POST(req) {
     try {
         const body = await req.json();
-        const { name, email, subject, message } = body;
+        const { name, email, appointmentDate, subject, message } = body;
 
         const transporter = nodemailer.createTransport({
             service: "gmail",
@@ -24,6 +24,8 @@ export async function POST(req) {
         We received your message:
 
         ${message}
+
+        Appointment date requested: ${appointmentDate ? appointmentDate : "Not provided"}
 
         Thanks,
         Farhan

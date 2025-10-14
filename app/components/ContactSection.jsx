@@ -7,6 +7,7 @@ export default function ContactSection() {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
+        appointmentDate: "",
         subject: "",
         message: "",
     });
@@ -34,7 +35,13 @@ export default function ContactSection() {
             alert(data.message);
 
             if (data.success) {
-                setFormData({ name: "", email: "", subject: "", message: "" }); // reset
+                setFormData({
+                    name: "",
+                    email: "",
+                    appointmentDate: "",
+                    subject: "",
+                    message: "",
+                }); // reset
             }
         } catch (error) {
             alert("Something went wrong. Try again later.");
@@ -95,6 +102,24 @@ export default function ContactSection() {
                                 name="email"
                                 placeholder="Email"
                                 value={formData.email}
+                                onChange={handleChange}
+                                required
+                                className="w-full mt-1 px-4 py-2 border rounded-md focus:ring-2 focus:ring-[#086E86] focus:outline-none"
+                            />
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.35 }}
+                        >
+                            <label className="block text-sm font-medium text-gray-700">
+                                Appointment Date
+                            </label>
+                            <input
+                                type="date"
+                                name="appointmentDate"
+                                value={formData.appointmentDate}
                                 onChange={handleChange}
                                 required
                                 className="w-full mt-1 px-4 py-2 border rounded-md focus:ring-2 focus:ring-[#086E86] focus:outline-none"
