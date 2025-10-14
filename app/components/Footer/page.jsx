@@ -26,9 +26,9 @@ export default function Footer({
     { name: "YouTube", href: "/", icon: Youtube },
   ],
   legal = [
-    { label: "Privacy Policy", href: "/" },
-    { label: "Terms of Service", href: "/" },
-    { label: "Cookies Settings", href: "/" },
+    { label: "Privacy Policy", href: "/privacy-policy" },
+    { label: "Terms of Service", href: "/terms-of-service" },
+    { label: "Cookies Settings", href: "/cookies" },
   ],
   brandNote = "© 2025 The Eye App. All rights reserved.",
 }) {
