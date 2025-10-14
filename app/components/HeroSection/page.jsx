@@ -11,7 +11,7 @@ export default function HeroSection() {
         >
             <div className="absolute inset-0 bg-white/70" /> {/* overlay */}
 
-            <div className="relative max-w-7xl mx-auto px-4 lg:px-8 py-12 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div className="relative max-w-7xl mx-auto px-4 lg:px-8 pt-4 pb-10 lg:pt-6 lg:pb-12 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
 
                 {/* Left Text Section */}
                 <motion.div
@@ -60,7 +60,7 @@ export default function HeroSection() {
                     transition={{ delay: 0.6, duration: 1, ease: "easeOut" }}
                     className="flex justify-center lg:justify-end relative"
                 >
-                    <div className="relative w-[420px] sm:w-[500px] h-[820px]">
+                    <div className="relative w-[320px] sm:w-[380px] lg:w-[420px] h-[560px] lg:h-[640px]">
                         <Image
                             src="/images/right-hero.png"
                             alt="Mobile app screen"
