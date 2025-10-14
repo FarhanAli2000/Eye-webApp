@@ -38,7 +38,7 @@ export default function Downer() {
                     <motion.div
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3 }}
-                        className="relative w-[320px] h-[520px] md:w-[420px] md:h-[640px] drop-shadow-2xl"
+                        className="relative w-[360px] h-[560px] md:w-[480px] md:h-[720px] drop-shadow-2xl"
                     >
                         <Image
                             src="/images/2mobiles.png"
