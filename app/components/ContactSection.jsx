@@ -1,52 +1,47 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
+const CALENDLY_URL = "https://calendly.com/tofarhanali";
+
 export default function ContactSection() {
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        appointmentDate: "",
-        subject: "",
-        message: "",
-    });
+    const [calendlyLoaded, setCalendlyLoaded] = useState(false);
 
-    const [loading, setLoading] = useState(false);
+    useEffect(() => {
+        if (typeof window === "undefined") return;
 
-    // input change handler
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
-
-    // submit handler
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setLoading(true);
-
-        try {
-            const res = await fetch("/api/contact", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(formData),
-            });
-
-            const data = await res.json();
-            alert(data.message);
-
-            if (data.success) {
-                setFormData({
-                    name: "",
-                    email: "",
-                    appointmentDate: "",
-                    subject: "",
-                    message: "",
-                }); // reset
+        const existingScript = document.getElementById("calendly-widget-script");
+        if (existingScript) {
+            if (window.Calendly) {
+                setCalendlyLoaded(true);
+            } else {
+                existingScript.addEventListener("load", () => setCalendlyLoaded(true));
             }
-        } catch (error) {
-            alert("Something went wrong. Try again later.");
-        } finally {
-            setLoading(false);
+            return;
+        }
+
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = "https://assets.calendly.com/assets/external/widget.css";
+        link.id = "calendly-widget-style";
+        document.head.appendChild(link);
+
+        const script = document.createElement("script");
+        script.id = "calendly-widget-script";
+        script.src = "https://assets.calendly.com/assets/external/widget.js";
+        script.async = true;
+        script.onload = () => setCalendlyLoaded(true);
+        script.onerror = () => setCalendlyLoaded(false);
+        document.body.appendChild(script);
+    }, []);
+
+    const openCalendly = () => {
+        if (typeof window === "undefined") return;
+        if (window.Calendly) {
+            window.Calendly.initPopupWidget({ url: CALENDLY_URL });
+        } else {
+            window.open(CALENDLY_URL, "_blank", "noopener,noreferrer");
         }
     };
 
@@ -69,110 +64,42 @@ export default function ContactSection() {
                         Send us a note and our team will respond within one business day.
                     </p>
 
-                    <form className="space-y-5" onSubmit={handleSubmit}>
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.2 }}
+                    <motion.div
+                        initial={{ opacity: 0, y: 15 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.15 }}
+                        className="mb-6 rounded-lg border border-[#086E86]/20 bg-white/80 p-4 shadow-sm"
+                    >
+                        <h3 className="text-lg font-semibold text-gray-900">
+                            Prefer to pick a time?
+                        </h3>
+                        <p className="mt-2 text-sm text-gray-600">
+                            Schedule a call that suits you using our Calendly link. We&apos;ll confirm the details instantly.
+                        </p>
+                        <button
+                            type="button"
+                            onClick={openCalendly}
+                            className="mt-4 inline-flex items-center gap-2 rounded-md bg-[#086E86] px-4 py-2 text-sm font-medium text-white shadow hover:bg-[#065a6a] focus:outline-none focus:ring-2 focus:ring-[#086E86]/40 disabled:cursor-not-allowed disabled:bg-[#086E86]/60"
+                            disabled={!calendlyLoaded}
                         >
-                            <label className="block text-sm font-medium text-gray-700">
-                                Name
-                            </label>
-                            <input
-                                type="text"
-                                name="name"
-                                placeholder="Name"
-                                value={formData.name}
-                                onChange={handleChange}
-                                required
-                                className="w-full mt-1 px-4 py-2 border rounded-md focus:ring-2 focus:ring-[#086E86] focus:outline-none"
-                            />
-                        </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.3 }}
+                            {calendlyLoaded ? "Book via Calendly" : "Loading Calendly…"}
+                        </button>
+                    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, y: 12 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.25 }}
+                        className="rounded-lg border border-dashed border-[#086E86]/30 bg-white/70 p-4 text-sm text-gray-600"
+                    >
+                        Prefer email? Reach us at{" "}
+                        <a
+                            href="mailto:support@theeyeapp.com"
+                            className="font-semibold text-[#086E86] underline underline-offset-2"
                         >
-                            <label className="block text-sm font-medium text-gray-700">
-                                Email
-                            </label>
-                            <input
-                                type="email"
-                                name="email"
-                                placeholder="Email"
-                                value={formData.email}
-                                onChange={handleChange}
-                                required
-                                className="w-full mt-1 px-4 py-2 border rounded-md focus:ring-2 focus:ring-[#086E86] focus:outline-none"
-                            />
-                        </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.35 }}
-                        >
-                            <label className="block text-sm font-medium text-gray-700">
-                                Appointment Date
-                            </label>
-                            <input
-                                type="date"
-                                name="appointmentDate"
-                                value={formData.appointmentDate}
-                                onChange={handleChange}
-                                required
-                                className="w-full mt-1 px-4 py-2 border rounded-md focus:ring-2 focus:ring-[#086E86] focus:outline-none"
-                            />
-                        </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.4 }}
-                        >
-                            <label className="block text-sm font-medium text-gray-700">
-                                Subject
-                            </label>
-                            <input
-                                type="text"
-                                name="subject"
-                                placeholder="Subject"
-                                value={formData.subject}
-                                onChange={handleChange}
-                                className="w-full mt-1 px-4 py-2 border rounded-md focus:ring-2 focus:ring-[#086E86] focus:outline-none"
-                            />
-                        </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.5 }}
-                        >
-                            <label className="block text-sm font-medium text-gray-700">
-                                Message
-                            </label>
-                            <textarea
-                                rows="4"
-                                name="message"
-                                placeholder="Message"
-                                value={formData.message}
-                                onChange={handleChange}
-                                required
-                                className="w-full mt-1 px-4 py-2 border rounded-md focus:ring-2 focus:ring-[#086E86] focus:outline-none"
-                            ></textarea>
-                        </motion.div>
-
-                        <motion.button
-                            type="submit"
-                            disabled={loading}
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="bg-[#086E86] text-white px-6 py-2 rounded-md hover:bg-[#065a6a] transition disabled:opacity-50"
-                        >
-                            {loading ? "Sending..." : "Submit"}
-                        </motion.button>
-                    </form>
+                            support@theeyeapp.com
+                        </a>{" "}
+                        and we&apos;ll get back to you shortly.
+                    </motion.div>
                 </motion.div>
 
                 {/* Right Image */}

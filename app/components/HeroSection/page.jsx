@@ -58,14 +58,15 @@ export default function HeroSection() {
                     initial={{ opacity: 0, scale: 0.9, y: 60 }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
                     transition={{ delay: 0.6, duration: 1, ease: "easeOut" }}
-                    className="flex justify-center lg:justify-end relative"
+                    className="relative flex justify-center lg:justify-end lg:pl-6"
                 >
-                    <div className="relative w-[320px] sm:w-[380px] lg:w-[420px] h-[560px] lg:h-[640px]">
+                    <div className="relative w-full max-w-[420px] sm:max-w-[480px] lg:max-w-[560px] min-h-[420px] sm:min-h-[520px] lg:min-h-[680px]">
                         <Image
                             src="/images/right-hero.png"
                             alt="Mobile app screen"
                             fill
-                            className="object-contain"
+                            className="object-contain drop-shadow-2xl"
+                            priority
                         />
                     </div>
                 </motion.div>

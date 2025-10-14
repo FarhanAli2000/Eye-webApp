@@ -49,7 +49,7 @@ export default function FAQPage() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true }}
-        className="text-gray-600 mb-6"
+        className="text-gray-400 mb-6"
       >
       
       </motion.p>
@@ -72,10 +72,10 @@ export default function FAQPage() {
             transition={{ duration: 0.6, delay: index * 0.15 }}
             viewport={{ once: true }}
             whileHover={{ scale: 1.03 }}
-            className="bg-[#95C9DA] shadow rounded-xl p-6 text-left border border-gray-200"
+            className="bg-[#E4F5FB] shadow rounded-xl p-6 text-left border border-[#6BB3CA]"
           >
             <h3 className="font-semibold mb-2 text-black">{faq.question}</h3>
-            <p className="text-black text-sm leading-relaxed">{faq.answer}</p>
+            <p className="text-black/80 text-sm leading-relaxed">{faq.answer}</p>
           </motion.div>
         ))}
       </div>

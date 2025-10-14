@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Facebook, Instagram, Linkedin, Youtube, Twitter } from "lucide-react";
 
 export default function Footer({
-  logoSrc = "/images/hen.png",
+  logoSrc = "/images/Logo.png",
   logoAlt = "The Eye App — Inglewood",
   contactTitle = "Contact:",
   phone = "1800 123 4567",
@@ -39,7 +39,7 @@ export default function Footer({
   const isHome = (s) => s.trim().toLowerCase() === "home";
 
   return (
-    <footer className="bg-[#A9D6E2] text-slate-900">
+    <footer className="bg-[#E4F5FB] text-slate-900">
       <div className="mx-auto max-w-7xl px-6 py-4 lg:px-10">
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
           {/* Brand + Contact */}

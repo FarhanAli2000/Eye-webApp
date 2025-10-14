@@ -10,20 +10,20 @@ const statsData = [
 
 export default function StatsSection() {
   return (
-    <section className="relative bg-[#86C1D3] overflow-hidden py-16 sm:py-20 md:py-32 lg:py-44">
+    <section className="relative bg-gradient-to-b from-[#92E0FD] to-white overflow-hidden py-16 sm:py-20 md:py-32 lg:py-40">
       {/* Left Mobile Image */}
       <div
         className="
           pointer-events-none hidden xl:block
           absolute left-6 bottom-0 translate-y-0
           xl:left-0
-          w-[220px] h-[420px] opacity-80
-          2xl:w-[240px] 2xl:h-[460px] 2xl:opacity-100
+          w-[180px] h-[340px] opacity-75
+          2xl:w-[220px] 2xl:h-[420px] 2xl:opacity-95
         "
         aria-hidden
       >
         <Image
-          src="/images/left.png"
+          src="/images/StatsSection.png"
           alt="Mobile mockup left"
           fill
           className="object-contain"
@@ -38,13 +38,13 @@ export default function StatsSection() {
           pointer-events-none hidden xl:block
           absolute right-6 bottom-0 translate-y-0
           xl:right-0
-          w-[220px] h-[420px] opacity-80
-          2xl:w-[240px] 2xl:h-[460px] 2xl:opacity-100
+          w-[180px] h-[340px] opacity-75
+          2xl:w-[220px] 2xl:h-[420px] 2xl:opacity-95
         "
         aria-hidden
       >
         <Image
-          src="/images/right.png"
+          src="/images/StatsSection2.png"
           alt="Mobile mockup right"
           fill
           className="object-contain"

@@ -3,7 +3,7 @@ import nodemailer from "nodemailer";
 export async function POST(req) {
     try {
         const body = await req.json();
-        const { name, email, appointmentDate, subject, message } = body;
+        const { name, email, subject, message } = body;
 
         const transporter = nodemailer.createTransport({
             service: "gmail",
@@ -25,7 +25,7 @@ export async function POST(req) {
 
         ${message}
 
-        Appointment date requested: ${appointmentDate ? appointmentDate : "Not provided"}
+        Need to coordinate a time? Grab a spot on our Calendly: https://calendly.com/your-organization/eye-app-demo
 
         Thanks,
         Farhan

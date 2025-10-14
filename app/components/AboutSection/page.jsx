@@ -17,7 +17,7 @@ export default function AboutSection() {
                     className="flex justify-center"
                 >
                     <Image
-                        src="/images/side.png"
+                        src="/images/About-the-eye.png"
                         alt="About The Eye App"
                         width={500}
                         height={500}
