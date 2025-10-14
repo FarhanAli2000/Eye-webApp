@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Facebook, Instagram, Linkedin, Youtube, Twitter } from "lucide-react";
 
 export default function Footer({
-  logoSrc = "/images/Logo.png",
+  logoSrc = "/images/logo.png",
   // image 
   logoAlt = "The Eye App — Inglewood",
   contactTitle = "Contact:",
