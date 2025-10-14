@@ -45,18 +45,19 @@ export default function FounderSection() {
                     transition={{ duration: 0.8, delay: 0.3 }}
                     viewport={{ once: true }}
                 >
-                    <motion.div
-                        whileHover={{ scale: 1.05 }}
-                        transition={{ duration: 0.3 }}
-                        className="relative w-[280px] h-[350px] md:w-[300px] md:h-[420px] rounded-2xl overflow-hidden shadow-xl"
-                    >
-                        <Image
-                            src="/images/founder.png"
-                            alt="Founder 1"
-                            fill
-                            className="object-cover"
-                        />
-                    </motion.div>
+                   <motion.div
+    whileHover={{ scale: 1.05 }}
+    transition={{ duration: 0.3 }}
+    className="relative w-[280px] h-[350px] md:w-[300px] md:h-[420px] rounded-2xl overflow-hidden shadow-xl bg-[#0D738B]"
+>
+    <Image
+        src="/images/Main-founder.png"
+        alt="Founder 1"
+        fill
+        className="object-cover"
+    />
+</motion.div>
+
                     <motion.div
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, delay: 0.1 }}

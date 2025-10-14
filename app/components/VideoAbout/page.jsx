@@ -6,7 +6,7 @@ import Hls from "hls.js";
 const VideoAbout = ({
     title = "See How The Eye App Brings Inglewood Together",
     description = "From block parties to business spotlights, The Eye App delivers real-time stories captured by the people who live and work here. Watch how neighbors, city partners, and entrepreneurs use the platform to share what is happening on their street right now.",
-    videoUrl = "https://customer-leo8lubv91ct4vwd.cloudflarestream.com/452f4c92011412641018976f0a12a4bd/manifest/video.m3u8",
+    videoUrl = "https://customer-leo8lubv91ct4vwd.cloudflarestream.com/5e4db3cc02ae33e66696d256a9cc7204/manifest/video.m3u8",
 }) => {
     const videoRef = useRef(null);
 
@@ -59,7 +59,7 @@ const VideoAbout = ({
                             autoPlay
                             loop
                             muted
-                            className="w-full h-full object-cover rounded-lg"
+                            className="w-full h-full object-contain rounded-lg bg-black"
                         />
                     </div>
                 </div>
