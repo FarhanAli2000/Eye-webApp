@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function Explore() {
   return (
     <section className="w-full py-14 bg-gradient-to-r from-[#92E0FD] to-[#FFFFFF]">
-      <div className="container mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
         {/* Left Content */}
         <motion.div

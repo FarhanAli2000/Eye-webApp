@@ -29,6 +29,13 @@ export default function FeaturesPage() {
   ];
 
   return (
+    <> 
+     <Head>
+                <title> The Eye App Features | Stay Connected in Inglewood</title>
+                <meta name="description" content=" Explore The Eye App’s powerful features, real-time alerts, local business connections, transit updates, and premium perks designed for Inglewood residents." />
+                {/* <meta name="keywords" content="contact, support, nextjs" /> */}
+                <meta property="og:title" content="Feature" />
+            </Head>
     <section className=" bg-gray-50">
       <Navbar />
       <AlertsSection />
@@ -42,5 +49,6 @@ export default function FeaturesPage() {
       <Trusted />
       <Footer />
     </section>
+    </>
   );
 }

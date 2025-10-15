@@ -38,7 +38,7 @@ const VideoAbout = ({
 
     return (
         <section className="w-full pt-10 md:pt-12 pb-16 md:pb-20 bg-white">
-            <div className="max-w-7xl mx-auto px-6 flex flex-col gap-10 items-center">
+            <div className="mx-auto w-full max-w-6xl px-6 lg:px-8 flex flex-col gap-10 items-center">
 
                 {/* Text Section */}
                 <div className="text-center order-1 md:order-none">

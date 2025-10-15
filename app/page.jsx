@@ -15,6 +15,13 @@ import Footer from "./components/Footer/page"
 
 export default function Home() {
   return (
+    <> 
+     <Head>
+                <title>  The Eye App—Stay Connected in Inglewood</title>
+                <meta name="description" content="  Get real-time alerts, events, and city updates with The Eye App, your all-in-one guide to Inglewood living." />
+                {/* <meta name="keywords" content="contact, support, nextjs" /> */}
+                <meta property="og:title" content="Feature" />
+            </Head>
     <div className="min-h-screen flex flex-col bg-white dark:bg-[#0f0f0f] text-gray-800 dark:text-gray-100">
 
       <Navbar />
@@ -64,5 +71,6 @@ export default function Home() {
         <Footer />
       </div> */}
     </div>
+    </>
   );
 }

@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function TransitSection() {
   return (
     <section className="w-full bg-white py-14">
-      <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
         {/* Left Side - Static Image */}
         <motion.div

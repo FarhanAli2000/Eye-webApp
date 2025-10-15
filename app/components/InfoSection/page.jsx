@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 
 export default function InfoSection() {
     return (
-        <section className="pt-10 md:pt-14 pb-8 md:pb-10 px-6 bg-white">
-            <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+        <section className="pt-10 md:pt-14 pb-8 md:pb-10 bg-white">
+            <div className="mx-auto w-full max-w-6xl px-6 lg:px-8 grid md:grid-cols-2 gap-8 items-center">
 
                 {/* Left Side - Image / Illustration */}
                 <motion.div

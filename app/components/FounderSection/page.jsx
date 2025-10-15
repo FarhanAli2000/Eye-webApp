@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function FounderSection() {
     return (
         <section className="w-full bg-gradient-to-b from-[#92E0FD] to-[#FFFFFF] py-16">
-            <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="max-w-6xl mx-auto w-full px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
                 {/* Left Side - Text */}
                 <motion.div

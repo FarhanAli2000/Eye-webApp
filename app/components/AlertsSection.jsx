@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function AlertsSection() {
   return (
     <section className="w-full bg-gradient-to-b from-[#92E0FD] to-[#FFFFFF] py-10 md:py-16">
-      <div className="container mx-auto grid grid-cols-1 items-center gap-10 px-4 sm:px-6 md:grid-cols-2">
+      <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 items-center gap-10 md:grid-cols-2">
         
         {/* Left Content */}
         <motion.div
@@ -18,7 +18,7 @@ export default function AlertsSection() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 leading-snug">
             Real-Time Alerts
           </h2>
-          <p className="mt-4 text-sm sm:text-base text-gray-700 leading-relaxed">
+          <p className="mt-4 text-sm sm:text-base text-gray-700 leading-relaxed max-w-xl">
             Never miss important updates again. The Eye App delivers instant alerts
             on traffic delays, safety notices, weather warnings, and citywide
             news—all in real time. Stay prepared, make better decisions, and keep
