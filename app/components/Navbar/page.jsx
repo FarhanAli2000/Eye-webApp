@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const links = [
     { href: "/", label: "Home" },
@@ -12,6 +13,14 @@ const links = [
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const pathname = usePathname();
+
+    const linkIsActive = (href) => {
+        if (href === "/") {
+            return pathname === "/";
+        }
+        return pathname === href || pathname.startsWith(`${href}/`);
+    };
 
     const handleToggle = () => setMenuOpen((prev) => !prev);
     const handleClose = () => setMenuOpen(false);
@@ -37,10 +46,8 @@ const Navbar = () => {
                         <Link
                             key={link.href}
                             href={link.href}
-                            className={`font-medium transition ${
-                                link.href === "/"
-                                    ? "text-[#025864] hover:text-[#03778C]"
-                                    : "text-gray-700 hover:text-[#03778C]"
+                            className={`font-medium transition hover:text-[#03778C] ${
+                                linkIsActive(link.href) ? "text-[#025864]" : "text-gray-700"
                             }`}
                         >
                             {link.label}
@@ -99,7 +106,11 @@ const Navbar = () => {
                             key={link.href}
                             href={link.href}
                             onClick={handleClose}
-                            className="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-white hover:text-[#03778C] transition"
+                            className={`block rounded-md px-3 py-2 text-base font-medium transition ${
+                                linkIsActive(link.href)
+                                    ? "bg-white text-[#025864]"
+                                    : "text-gray-700 hover:bg-white hover:text-[#03778C]"
+                            }`}
                         >
                             {link.label}
                         </Link>
