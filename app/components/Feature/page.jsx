@@ -105,7 +105,7 @@ export default function Feature() {
                   }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.03 }}
-                  className="group relative flex h-[420px] sm:h-[500px] overflow-hidden rounded-2xl bg-gray-900/90 shadow-xl transition-shadow duration-300 hover:shadow-2xl"
+                  className="group relative mx-auto w-full max-w-sm sm:mx-0 sm:w-full sm:max-w-none flex h-[420px] sm:h-[500px] overflow-hidden rounded-2xl bg-gray-900/90 shadow-xl transition-shadow duration-300 hover:shadow-2xl"
                 >
                   <div className="relative h-full w-full">
                     <Image
@@ -114,6 +114,7 @@ export default function Feature() {
                       fill
                       className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                     />
+                    {/* idsiad */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                     <div className="absolute inset-x-4 bottom-4 sm:inset-x-6 sm:bottom-6 flex flex-col gap-2 text-left">
                       <h3 className="text-xl sm:text-2xl font-semibold text-white">
