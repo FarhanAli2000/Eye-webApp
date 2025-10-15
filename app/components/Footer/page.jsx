@@ -41,7 +41,7 @@ export default function Footer({
 
   return (
     <footer className="bg-[#E4F5FB] text-slate-900">
-      <div className="mx-auto max-w-7xl px-6 py-4 lg:px-10">
+      <div className="mx-auto max-w-7xl px-6 pt-12 pb-4 lg:px-10 lg:pt-16">
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
           {/* Brand + Contact */}
           <div className="space-y-4">

@@ -19,7 +19,7 @@ export default function InfoSection() {
                     <motion.div
                         whileHover={{ scale: 1.05, boxShadow: "0px 15px 30px rgba(0,0,0,0.2)" }}
                         transition={{ duration: 0.3 }}
-                        className="relative w-full max-w-2xl h-[400px] rounded-xl overflow-hidden shadow-lg"
+                        className="relative w-full max-w-xl h-[460px] rounded-xl overflow-hidden shadow-lg"
                     >
                         <Image
                             src="/images/eye.png"

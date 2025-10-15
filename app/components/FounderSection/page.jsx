@@ -40,20 +40,21 @@ export default function FounderSection() {
                    <motion.div
     whileHover={{ scale: 1.05 }}
     transition={{ duration: 0.3 }}
-    className="relative w-[280px] h-[350px] md:w-[300px] md:h-[420px] rounded-2xl overflow-hidden shadow-xl bg-[#0D738B]"
+    className="relative w-[280px] h-[330px] md:w-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-xl bg-[#0D738B]"
 >
     <Image
         src="/images/Main-founder.png"
         alt="Founder 1"
         fill
         className="object-cover"
+        style={{ objectPosition: "center 25%" }}
     />
 </motion.div>
 
                     <motion.div
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, delay: 0.1 }}
-                        className="relative w-[280px] h-[350px] md:w-[300px] md:h-[420px] rounded-2xl overflow-hidden shadow-xl"
+                        className="relative w-[280px] h-[330px] md:w-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-xl"
                     >
                         <Image
                             src="/images/eye.png"
