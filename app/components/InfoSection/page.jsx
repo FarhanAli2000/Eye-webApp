@@ -40,7 +40,7 @@ export default function InfoSection() {
                 >
                     <p className="text-teal-600 font-semibold mb-2">Our Vision</p>
                     <h2 className="text-4xl font-bold text-gray-900 leading-snug mb-5">
-                        A smarter city experience for every resident
+                       A Smarter, More Connected Inglewood Experience
                     </h2>
                     <p className="text-gray-600 leading-relaxed mb-3">
                         The Eye App was born out of conversations with neighbors who wanted a single place to

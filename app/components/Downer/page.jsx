@@ -21,10 +21,8 @@ export default function Downer() {
                         Built for Inglewood, powered by community voices
                     </h2>
                     <p className="text-gray-600 mt-4 leading-relaxed text-center lg:text-left">
-                        Our team walks the blocks of Inglewood every week to talk with residents, merchants,
-                        and city partners. Their stories shape the roadmap: more transparency around public
-                        services, more visibility for local businesses, and more reasons to explore the places
-                        that make our city special.
+                     Our team walks the blocks of Inglewood every week, connecting with residents, merchants, and city partners. Their feedback shapes every update we make, from improving transparency around public services to giving local businesses more visibility and helping residents discover new places to explore.
+Because when Inglewood stays connected, our community thrives, and The Eye App makes that connection possible.
                     </p>
                 </motion.div>
 

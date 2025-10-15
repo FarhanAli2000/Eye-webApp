@@ -14,7 +14,7 @@ export default function FounderSection() {
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
                 >
-                    <p className="text-sm font-semibold text-teal-700 mb-2">About Founder</p>
+                    <p className="text-sm font-semibold text-teal-700 mb-2">Meet the Founder</p>
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                         Courtney Reddix
                     </h2>
