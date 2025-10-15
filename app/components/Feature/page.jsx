@@ -130,11 +130,11 @@ export default function Feature() {
           </Swiper>
 
           {/* Custom Arrows */}
-          <button className="custom-prev absolute left-2 sm:left-[-60px] top-1/2 z-20 flex h-10 w-10 sm:h-12 sm:w-12 -translate-y-1/2 items-center justify-center rounded-full bg-black/70 text-white shadow-lg hover:bg-black/90">
+          <button className="custom-prev absolute left-2 sm:left-[-60px] top-1/2 z-20 hidden h-10 w-10 sm:flex sm:h-12 sm:w-12 -translate-y-1/2 items-center justify-center rounded-full bg-black/70 text-white shadow-lg hover:bg-black/90">
             <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
           </button>
 
-          <button className="custom-next absolute right-2 sm:right-[-60px] top-1/2 z-20 flex h-10 w-10 sm:h-12 sm:w-12 -translate-y-1/2 items-center justify-center rounded-full bg-black/70 text-white shadow-lg hover:bg-black/90">
+          <button className="custom-next absolute right-2 sm:right-[-60px] top-1/2 z-20 hidden h-10 w-10 sm:flex sm:h-12 sm:w-12 -translate-y-1/2 items-center justify-center rounded-full bg-black/70 text-white shadow-lg hover:bg-black/90">
             <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
           </button>
         </div>
