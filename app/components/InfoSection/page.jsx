@@ -5,12 +5,12 @@ import { motion } from "framer-motion";
 
 export default function InfoSection() {
     return (
-        <section className="py-10 md:py-14 px-6 bg-white">
+        <section className="pt-10 md:pt-14 pb-8 md:pb-10 px-6 bg-white">
             <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
 
                 {/* Left Side - Image / Illustration */}
                 <motion.div
-                    className="flex justify-center"
+                    className="flex justify-center order-2 md:order-1"
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
@@ -32,6 +32,7 @@ export default function InfoSection() {
 
                 {/* Right Side - Text */}
                 <motion.div
+                    className="order-1 md:order-2"
                     initial={{ opacity: 0, x: 50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}

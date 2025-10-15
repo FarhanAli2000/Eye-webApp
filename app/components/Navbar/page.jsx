@@ -28,7 +28,11 @@ const Navbar = () => {
     return (
         <header className="bg-[#F1F8F9] shadow-sm">
             <div className="max-w-6xl mx-auto flex items-center justify-between py-4 px-6">
-                <div className="flex items-center space-x-3">
+                <Link
+                    href="/"
+                    className="flex items-center space-x-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#03778C] rounded-md"
+                    aria-label="Go to homepage"
+                >
                     <Image
                         src="/images/logo.png"
                         alt="The Eye Logo"
@@ -39,7 +43,7 @@ const Navbar = () => {
                     <div className="text-sm text-gray-600 font-semibold leading-tight">
                         THE EYE <br /> BLOCKDOO <br />
                     </div>
-                </div>
+                </Link>
 
                 <nav className="hidden md:flex items-center space-x-8">
                     {links.map((link) => (

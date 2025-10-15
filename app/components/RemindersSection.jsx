@@ -11,7 +11,7 @@ export default function RemindersSection() {
 
         {/* Left Side - Image Replaced Here */}
         <motion.div
-          className="flex justify-center md:justify-start"
+          className="flex justify-center md:justify-start order-2 md:order-1"
           initial={{ opacity: 0, x: -60, scale: 0.9 }}
           whileInView={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ duration: 0.9 }}
@@ -30,7 +30,7 @@ export default function RemindersSection() {
 
         {/* Right Side - Text */}
         <motion.div
-          className="text-center md:text-left"
+          className="text-center md:text-left order-1 md:order-2"
           initial={{ opacity: 0, x: 60 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.9, delay: 0.2 }}

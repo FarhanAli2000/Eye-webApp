@@ -37,11 +37,11 @@ const VideoAbout = ({
     }, [videoUrl]);
 
     return (
-        <section className="w-full py-16 bg-white">
+        <section className="w-full pt-10 md:pt-12 pb-16 md:pb-20 bg-white">
             <div className="max-w-7xl mx-auto px-6 flex flex-col gap-10 items-center">
 
                 {/* Text Section */}
-                <div className="text-center">
+                <div className="text-center order-1 md:order-none">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                         {title}
                     </h2>
@@ -51,7 +51,7 @@ const VideoAbout = ({
                 </div>
 
                 {/* Video Section */}
-                <div className="flex justify-center w-full">
+                <div className="flex justify-center w-full order-2 md:order-none">
                     <div className="relative w-full max-w-4xl h-[250px] sm:h-[400px] bg-gray-300 rounded-lg overflow-hidden flex items-center justify-center">
                         <video
                             ref={videoRef}
