@@ -23,7 +23,7 @@ export default function StatsSection() {
         aria-hidden
       >
         <Image
-          src="/images/StatsSection.png"
+          src="/images/score.png"
           alt="Mobile mockup left"
           fill
           className="object-contain"
@@ -44,7 +44,7 @@ export default function StatsSection() {
         aria-hidden
       >
         <Image
-          src="/images/StatsSection2.png"
+          src="/images/score2.png"
           alt="Mobile mockup right"
           fill
           className="object-contain"
